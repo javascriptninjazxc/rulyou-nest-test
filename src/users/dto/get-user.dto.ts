@@ -12,5 +12,5 @@ export class GetUserQueryDto {
   @IsInt()
   @Min(0)
   @Max(100)
-  efficiency: number;
+  efficiency?: number;
 }

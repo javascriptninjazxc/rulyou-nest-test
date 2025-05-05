@@ -3,6 +3,7 @@ import { CreateUserDto } from '../dto/create-user.dto';
 
 @Table({
   tableName: 'users',
+  timestamps: false,
 })
 export class UserModel extends Model<UserModel, CreateUserDto> {
   @Column({
@@ -34,11 +35,11 @@ export class UserModel extends Model<UserModel, CreateUserDto> {
   @Validate({
     min: {
       args: [0],
-      msg: 'Эффективность не может быть меньше 0',
+      msg: 'efficiency не может быть меньше 0',
     },
     max: {
       args: [100],
-      msg: 'Эффективность не может быть больше 100',
+      msg: 'efficiency не может быть больше 100',
     },
   })
   @Column({

@@ -17,8 +17,6 @@ import { UserModel } from "./users/models/user.model";
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       models: [UserModel],
-      autoLoadModels: true,
-      synchronize: true,
     }),
     UsersModule,
   ],
